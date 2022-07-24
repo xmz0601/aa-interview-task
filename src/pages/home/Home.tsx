@@ -1,8 +1,10 @@
 import { Box } from '@chakra-ui/react';
+import { Banner } from '../../components';
 
 export const Home: React.FC = () => {
   return (
     <>
+      <Banner />
       <Box
         bg={{
           base: 'white',
