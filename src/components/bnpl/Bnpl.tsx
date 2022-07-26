@@ -109,7 +109,7 @@ export const Bnpl: React.FC = () => {
             h='90%'
             position='absolute'
             bottom={0}
-            left='15%'
+            left='10%'
             display={{ md: 'block', lg: 'none' }}
             className={styles['bnpl_img']}
           />
