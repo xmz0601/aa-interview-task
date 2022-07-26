@@ -63,7 +63,6 @@ export const ExploreItem: React.FC<ExploreItemProps> = ({
           className={styles['right_arrow']}
           display='none'
         />
-        {/* </Box> */}
       </Box>
     </Link>
   );
