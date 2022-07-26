@@ -1,7 +1,0 @@
-.blog_item_btn {
-  /* transition: all 0.3s; */
-}
-.blog_item_container:hover .blog_item_btn {
-  background-color: '#fff';
-  color: '#1e284e';
-}

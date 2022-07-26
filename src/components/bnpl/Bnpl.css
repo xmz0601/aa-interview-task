@@ -4,10 +4,3 @@
 .bnpl_container:hover .bnpl_img {
   transform: scale(1.05);
 }
-
-.cp_img {
-  transition: all 0.3s;
-}
-.cp_container:hover .cp_img {
-  transform: scale(1.05);
-}

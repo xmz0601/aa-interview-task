@@ -1,6 +1,5 @@
 import { Box, Heading, Image, Text, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import './BlogItem.css';
 
 interface BlogItemProps {
   smImg: string;
@@ -46,7 +45,6 @@ export const BlogItem: React.FC<BlogItemProps> = ({
         backgroundSize='cover'
         backgroundPosition='top'
         display={{ base: 'none', md: 'block' }}
-        className='blog_item_container'
       >
         <Heading
           as='h3'
@@ -67,13 +65,7 @@ export const BlogItem: React.FC<BlogItemProps> = ({
         >
           {description}
         </Text>
-        <Button
-          variant='outline'
-          position='absolute'
-          bottom={12}
-          {...btnStyle}
-          className='blog_item_btn'
-        >
+        <Button variant='outline' position='absolute' bottom={12} {...btnStyle}>
           Read blog article
         </Button>
       </Box>
