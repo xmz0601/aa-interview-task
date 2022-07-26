@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import {
   Box,
   VStack,
@@ -42,11 +42,11 @@ export const Banner: React.FC = () => {
   const [currentBtn, setCurrentBtn] = useState(0);
   const [showDirectFlights, setShowDirectFlights] = useState(false);
 
-  const clickFlightSearchBtn = (i) => {
+  const clickFlightSearchBtn = (i: number) => {
     setCurrentBtn(i);
   };
 
-  const onSwitchChange = (e) => {
+  const onSwitchChange = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.checked);
     if (e.target.checked) {
       setShowDirectFlights(true);
