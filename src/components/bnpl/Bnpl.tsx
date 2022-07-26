@@ -10,7 +10,7 @@ import {
   Button
 } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
-import './Bnpl.css';
+import styles from './Bnpl.module.css';
 
 import BnplLgImage from '../../assets/images/bnpl-lg.png';
 import BnplMdImage from '../../assets/images/bnpl-md.png';
@@ -54,7 +54,7 @@ export const Bnpl: React.FC = () => {
         border='1px solid #e1e8ee'
         borderRadius={20}
         columns={{ base: 1, md: 2 }}
-        className='bnpl_container'
+        className={styles['bnpl_container']}
         overflow='hidden'
       >
         <Box p={{ base: 10, lg: 14 }}>
@@ -111,7 +111,7 @@ export const Bnpl: React.FC = () => {
             bottom={0}
             left='15%'
             display={{ md: 'block', lg: 'none' }}
-            className='bnpl_img'
+            className={styles['bnpl_img']}
           />
           <Image
             src={BnplLgImage}
@@ -121,7 +121,7 @@ export const Bnpl: React.FC = () => {
             bottom={0}
             left='5%'
             display={{ base: 'none', lg: 'block' }}
-            className='bnpl_img'
+            className={styles['bnpl_img']}
           />
         </Box>
       </SimpleGrid>

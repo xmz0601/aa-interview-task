@@ -1,6 +1,6 @@
 import { Box, Image, Heading, Text, SimpleGrid } from '@chakra-ui/react';
 import { CpItem } from '../cpItem';
-import './CancellationProtection.css';
+import styles from './CancellationProtection.module.css';
 
 import IllnessIcon from '../../assets/icons/illness.svg';
 import WeatherIcon from '../../assets/icons/weather.svg';
@@ -63,7 +63,7 @@ export const CancellationProtection: React.FC = () => {
         border='1px solid #e1e8ee'
         borderRadius={20}
         columns={{ base: 1, lg: 2 }}
-        className='cp_container'
+        className={styles['cp_container']}
         overflow='hidden'
       >
         <Box position='relative'>
@@ -86,7 +86,7 @@ export const CancellationProtection: React.FC = () => {
             bottom={0}
             left='17%'
             display={{ base: 'none', lg: 'block' }}
-            className='cp_img'
+            className={styles['cp_img']}
           />
         </Box>
         <Box py={{ base: 10, lg: 14 }} px={{ base: 10, md: 20, lg: 7 }}>

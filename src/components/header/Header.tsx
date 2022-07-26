@@ -10,7 +10,7 @@ import {
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
 
-import './Header.css';
+import styles from './Header.module.css';
 import Logo from '../../assets/images/logos/alternative-airlines.jpg';
 import MyHamburgerIcon from '../../assets/icons/menu.svg';
 
@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
                 key={ind}
                 as={Button}
                 rightIcon={item.hasIcon ? <ChevronDownIcon /> : null}
-                className='top_menu_item'
+                className={styles['top_menu_item']}
                 {...menuBtnStyle}
                 onClick={(e) => {
                   e.preventDefault();
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
         {/* manage booking & hamburger icon */}
         <Box
           as='button'
-          className='top_menu_item'
+          className={styles['top_menu_item']}
           display={{ base: 'none', md: 'block' }}
           {...menuBtnStyle}
         >

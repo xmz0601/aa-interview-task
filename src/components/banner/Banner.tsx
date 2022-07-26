@@ -14,7 +14,7 @@ import {
   GridItem
 } from '@chakra-ui/react';
 
-import './Banner.css';
+import styles from './Banner.module.css';
 import BackgroundImage from '../../assets/images/background-image.jpg';
 import TrustpilotImage from '../../assets/images/trustpilot.png';
 
@@ -112,7 +112,7 @@ export const Banner: React.FC = () => {
               //   key={ind}
               //   as='button'
               //   {...flightSearchBtnStyle}
-              //   className={currentBtn === ind ? 'active_flight_search_btn' : ''}
+              //   className={currentBtn === ind ? {styles['active_flight_search_btn']} : ''}
               // >
               //   {item}
               // </Box>
