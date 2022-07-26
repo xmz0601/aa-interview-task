@@ -1,0 +1,9 @@
+.city_img {
+  transition: all 0.3s;
+}
+.city_container:hover .city_img {
+  transform: scale(1.1);
+}
+.city_container:hover .right_arrow {
+  display: block;
+}
