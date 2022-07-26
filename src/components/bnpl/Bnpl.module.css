@@ -1,0 +1,6 @@
+.bnpl_img {
+  transition: all 0.3s;
+}
+.bnpl_container:hover .bnpl_img {
+  transform: scale(1.05);
+}
