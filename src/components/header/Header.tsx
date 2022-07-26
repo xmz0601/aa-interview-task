@@ -14,6 +14,25 @@ import './Header.css';
 import Logo from '../../assets/images/logos/alternative-airlines.jpg';
 import MyHamburgerIcon from '../../assets/icons/menu.svg';
 
+const menuList = [
+  {
+    title: 'Book flights',
+    hasIcon: true
+  },
+  {
+    title: 'Information',
+    hasIcon: true
+  },
+  {
+    title: 'Help',
+    hasIcon: true
+  },
+  {
+    title: 'Travel Agents',
+    hasIcon: false
+  }
+];
+
 const menuBtnStyle = {
   h: 84,
   color: '#8b8b8b',
@@ -22,12 +41,13 @@ const menuBtnStyle = {
   fontWeight: 400,
   borderRadius: 0,
   padding: '0 10px',
-  _hover: { backgroundColor: '#fff' }
+  _hover: { backgroundColor: '#fff' },
+  _active: { backgroundColor: '#fff' }
 };
 
 export const Header: React.FC = () => {
   return (
-    <Box as='header' bg='white' h={84}>
+    <Box as='header' bg='white' h={{ base: 70, sm: 84 }}>
       <Flex maxW={1080} h={84} mx='auto' px={5} justify={'end'}>
         {/* logo */}
         <Heading as='h1' fontSize={0} mr={{ base: 'auto', md: 5 }}>
@@ -38,7 +58,7 @@ export const Header: React.FC = () => {
               alt='Alternative Airlines Logo'
               w={125}
               h={10}
-              mt={22}
+              mt={{ base: 18, sm: 22 }}
             />
           </Link>
         </Heading>
@@ -46,33 +66,20 @@ export const Header: React.FC = () => {
         {/* top menu */}
         <Box mr='auto' display={{ base: 'none', md: 'block' }}>
           <Menu>
-            <MenuButton
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-              className='top_menu_item'
-              {...menuBtnStyle}
-            >
-              Book flights
-            </MenuButton>
-            <MenuButton
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-              className='top_menu_item'
-              {...menuBtnStyle}
-            >
-              Information
-            </MenuButton>
-            <MenuButton
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-              className='top_menu_item'
-              {...menuBtnStyle}
-            >
-              Help
-            </MenuButton>
-            <MenuButton as={Button} {...menuBtnStyle} className='top_menu_item'>
-              Travel Agents
-            </MenuButton>
+            {menuList.map((item, ind) => (
+              <MenuButton
+                key={ind}
+                as={Button}
+                rightIcon={item.hasIcon ? <ChevronDownIcon /> : null}
+                className='top_menu_item'
+                {...menuBtnStyle}
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                {item.title}
+              </MenuButton>
+            ))}
           </Menu>
         </Box>
 
@@ -89,7 +96,7 @@ export const Header: React.FC = () => {
           as={Image}
           w={7}
           h={7}
-          my={7}
+          mt={{ base: 5, sm: 7 }}
           display={{ base: 'block', md: 'none' }}
           src={MyHamburgerIcon}
           cursor='pointer'

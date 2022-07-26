@@ -38,11 +38,7 @@ const searchFilterContentStyle = {
 };
 
 export const Banner: React.FC = () => {
-  const [flightSearchBtn, setFlightSearchBtn] = useState([
-    'Return',
-    'One Way',
-    'Multi-city'
-  ]);
+  const flightSearchBtn = ['Return', 'One Way', 'Multi-city'];
   const [currentBtn, setCurrentBtn] = useState(0);
   const [showDirectFlights, setShowDirectFlights] = useState(false);
 
